@@ -164,12 +164,12 @@ const generateAuthors = function(){
     const articleAuthor = article.getAttribute('data-author');
     console.log(articleAuthor);
     /* generate HTML of the link */
-    const linkHTML ='by '+'<a href="#' + articleAuthor + '"><span>' + articleAuthor + '</span></a> ';
+    const linkHTML ='by '+'<a href="#author-' + articleAuthor + '"><span>' + articleAuthor + '</span></a> ';
     console.log(linkHTML);
     /* add generated code to html variable */
     html = html + linkHTML;
     /* insert HTML of author into the tags wrapper */
-    //authorsWrapper.innerHTML = html;
+    authorsWrapper.innerHTML = html;
   /* END LOOP: for every article: */
   }
 };
