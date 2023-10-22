@@ -124,12 +124,12 @@ const generateTags = function(){
   /* [NEW] START LOOP: for each tag in allTags: */
   for(let tag in allTags){
   /* [NEW] generate code of a link and add it to allTagsHTML */
-    allTagsHTML += '<li><a ' + '"href="#tag-">' + tag + '(' + allTags[tag] + ') </a></li> ';
+    allTagsHTML += '<li>' + '<a href="#tag-' + tag + '"><span>' + tag + '(' + allTags[tag] + ')</span></a></li>';
+    console.log(allTagsHTML);
   /* [NEW] END LOOP: for each tag in allTags: */
   }
   /*[NEW] add HTML from allTagsHTML to tagList */
-  tagList.innerHTML =  allTagsHTML;
-  console.log(allTagsHTML);
+  tagList.innerHTML = allTagsHTML;
 };
 
 generateTags();
